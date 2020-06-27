@@ -1,0 +1,2 @@
+Newport_Loft_Ref.hdr
+Newport_Loft_Ref.irr.hdr

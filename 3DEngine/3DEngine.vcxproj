@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\3DEngine.cpp" />
+    <ClCompile Include="source\Camera.cpp" />
+    <ClCompile Include="source\engine.cpp" />
+    <ClCompile Include="source\glm\detail\glm.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\GUI.cpp" />
+    <ClCompile Include="source\imgui\imgui.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="source\imgui\imgui_demo.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="source\imgui\imgui_draw.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="source\imgui\imgui_impl_opengl3.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="source\imgui\imgui_impl_sdl.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="source\imgui\imgui_stl.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="source\imgui\imgui_widgets.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="source\InputManager.cpp" />
+    <ClCompile Include="source\loadfile.h" />
+    <ClCompile Include="source\Material.cpp" />
+    <ClCompile Include="source\MetaStuff\StringCast.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\Object.cpp" />
+    <ClCompile Include="source\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\Projection.cpp" />
+    <ClCompile Include="source\Render.cpp" />
+    <ClCompile Include="source\rgbe.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\constructor.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\destructor.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\comparison\compare_equal.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\comparison\compare_less.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\constructor\constructor_wrapper_base.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\conversion\std_conversion_functions.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\destructor\destructor_wrapper_base.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\enumeration\enumeration_helper.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\enumeration\enumeration_wrapper_base.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\library\library_unix.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\library\library_win.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\method\method_wrapper_base.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\misc\standard_types.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\parameter_info\parameter_info_wrapper_base.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\property\property_wrapper_base.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\registration\registration_executer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\registration\registration_state_saver.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\type\type_data.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\type\type_register.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\detail\variant\variant_compare.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\enumeration.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\library.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\method.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\parameter_info.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\policy.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\property.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\registration.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\type.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\variant.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\variant_associative_view.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\rttr\variant_sequential_view.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\shader.cpp" />
+    <ClCompile Include="source\Wireframe.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\assimp\ai_assert.h" />
+    <ClInclude Include="source\assimp\anim.h" />
+    <ClInclude Include="source\assimp\BaseImporter.h" />
+    <ClInclude Include="source\assimp\Bitmap.h" />
+    <ClInclude Include="source\assimp\BlobIOSystem.h" />
+    <ClInclude Include="source\assimp\ByteSwapper.h" />
+    <ClInclude Include="source\assimp\camera.h" />
+    <ClInclude Include="source\assimp\cexport.h" />
+    <ClInclude Include="source\assimp\cfileio.h" />
+    <ClInclude Include="source\assimp\cimport.h" />
+    <ClInclude Include="source\assimp\color4.h" />
+    <ClInclude Include="source\assimp\Compiler\poppack1.h" />
+    <ClInclude Include="source\assimp\Compiler\pstdint.h" />
+    <ClInclude Include="source\assimp\Compiler\pushpack1.h" />
+    <ClInclude Include="source\assimp\config.h" />
+    <ClInclude Include="source\assimp\CreateAnimMesh.h" />
+    <ClInclude Include="source\assimp\DefaultIOStream.h" />
+    <ClInclude Include="source\assimp\DefaultIOSystem.h" />
+    <ClInclude Include="source\assimp\DefaultLogger.hpp" />
+    <ClInclude Include="source\assimp\Defines.h" />
+    <ClInclude Include="source\assimp\defs.h" />
+    <ClInclude Include="source\assimp\Exceptional.h" />
+    <ClInclude Include="source\assimp\Exporter.hpp" />
+    <ClInclude Include="source\assimp\fast_atof.h" />
+    <ClInclude Include="source\assimp\GenericProperty.h" />
+    <ClInclude Include="source\assimp\Hash.h" />
+    <ClInclude Include="source\assimp\Importer.hpp" />
+    <ClInclude Include="source\assimp\importerdesc.h" />
+    <ClInclude Include="source\assimp\IOStream.hpp" />
+    <ClInclude Include="source\assimp\IOStreamBuffer.h" />
+    <ClInclude Include="source\assimp\IOSystem.hpp" />
+    <ClInclude Include="source\assimp\irrXMLWrapper.h" />
+    <ClInclude Include="source\assimp\light.h" />
+    <ClInclude Include="source\assimp\LineSplitter.h" />
+    <ClInclude Include="source\assimp\LogAux.h" />
+    <ClInclude Include="source\assimp\Logger.hpp" />
+    <ClInclude Include="source\assimp\LogStream.hpp" />
+    <ClInclude Include="source\assimp\Macros.h" />
+    <ClInclude Include="source\assimp\material.h" />
+    <ClInclude Include="source\assimp\MathFunctions.h" />
+    <ClInclude Include="source\assimp\matrix3x3.h" />
+    <ClInclude Include="source\assimp\matrix4x4.h" />
+    <ClInclude Include="source\assimp\MemoryIOWrapper.h" />
+    <ClInclude Include="source\assimp\mesh.h" />
+    <ClInclude Include="source\assimp\metadata.h" />
+    <ClInclude Include="source\assimp\NullLogger.hpp" />
+    <ClInclude Include="source\assimp\ParsingUtils.h" />
+    <ClInclude Include="source\assimp\pbrmaterial.h" />
+    <ClInclude Include="source\assimp\port\AndroidJNI\AndroidJNIIOSystem.h" />
+    <ClInclude Include="source\assimp\postprocess.h" />
+    <ClInclude Include="source\assimp\Profiler.h" />
+    <ClInclude Include="source\assimp\ProgressHandler.hpp" />
+    <ClInclude Include="source\assimp\qnan.h" />
+    <ClInclude Include="source\assimp\quaternion.h" />
+    <ClInclude Include="source\assimp\RemoveComments.h" />
+    <ClInclude Include="source\assimp\scene.h" />
+    <ClInclude Include="source\assimp\SceneCombiner.h" />
+    <ClInclude Include="source\assimp\SGSpatialSort.h" />
+    <ClInclude Include="source\assimp\SkeletonMeshBuilder.h" />
+    <ClInclude Include="source\assimp\SmoothingGroups.h" />
+    <ClInclude Include="source\assimp\SpatialSort.h" />
+    <ClInclude Include="source\assimp\StandardShapes.h" />
+    <ClInclude Include="source\assimp\StreamReader.h" />
+    <ClInclude Include="source\assimp\StreamWriter.h" />
+    <ClInclude Include="source\assimp\StringComparison.h" />
+    <ClInclude Include="source\assimp\StringUtils.h" />
+    <ClInclude Include="source\assimp\Subdivision.h" />
+    <ClInclude Include="source\assimp\texture.h" />
+    <ClInclude Include="source\assimp\TinyFormatter.h" />
+    <ClInclude Include="source\assimp\types.h" />
+    <ClInclude Include="source\assimp\vector2.h" />
+    <ClInclude Include="source\assimp\vector3.h" />
+    <ClInclude Include="source\assimp\version.h" />
+    <ClInclude Include="source\assimp\Vertex.h" />
+    <ClInclude Include="source\assimp\XMLTools.h" />
+    <ClInclude Include="source\Camera.h" />
+    <ClInclude Include="source\engine.h" />
+    <ClInclude Include="source\FMOD\fmod.h" />
+    <ClInclude Include="source\FMOD\fmod.hpp" />
+    <ClInclude Include="source\FMOD\fmod_codec.h" />
+    <ClInclude Include="source\FMOD\fmod_common.h" />
+    <ClInclude Include="source\FMOD\fmod_dsp.h" />
+    <ClInclude Include="source\FMOD\fmod_dsp_effects.h" />
+    <ClInclude Include="source\FMOD\fmod_errors.h" />
+    <ClInclude Include="source\FMOD\fmod_output.h" />
+    <ClInclude Include="source\freetype\config\ftconfig.h" />
+    <ClInclude Include="source\freetype\config\ftheader.h" />
+    <ClInclude Include="source\freetype\config\ftmodule.h" />
+    <ClInclude Include="source\freetype\config\ftoption.h" />
+    <ClInclude Include="source\freetype\config\ftstdlib.h" />
+    <ClInclude Include="source\freetype\freetype.h" />
+    <ClInclude Include="source\freetype\ftadvanc.h" />
+    <ClInclude Include="source\freetype\ftbbox.h" />
+    <ClInclude Include="source\freetype\ftbdf.h" />
+    <ClInclude Include="source\freetype\ftbitmap.h" />
+    <ClInclude Include="source\freetype\ftbzip2.h" />
+    <ClInclude Include="source\freetype\ftcache.h" />
+    <ClInclude Include="source\freetype\ftchapters.h" />
+    <ClInclude Include="source\freetype\ftcid.h" />
+    <ClInclude Include="source\freetype\ftdriver.h" />
+    <ClInclude Include="source\freetype\fterrdef.h" />
+    <ClInclude Include="source\freetype\fterrors.h" />
+    <ClInclude Include="source\freetype\ftfntfmt.h" />
+    <ClInclude Include="source\freetype\ftgasp.h" />
+    <ClInclude Include="source\freetype\ftglyph.h" />
+    <ClInclude Include="source\freetype\ftgxval.h" />
+    <ClInclude Include="source\freetype\ftgzip.h" />
+    <ClInclude Include="source\freetype\ftimage.h" />
+    <ClInclude Include="source\freetype\ftincrem.h" />
+    <ClInclude Include="source\freetype\ftlcdfil.h" />
+    <ClInclude Include="source\freetype\ftlist.h" />
+    <ClInclude Include="source\freetype\ftlzw.h" />
+    <ClInclude Include="source\freetype\ftmac.h" />
+    <ClInclude Include="source\freetype\ftmm.h" />
+    <ClInclude Include="source\freetype\ftmodapi.h" />
+    <ClInclude Include="source\freetype\ftmoderr.h" />
+    <ClInclude Include="source\freetype\ftotval.h" />
+    <ClInclude Include="source\freetype\ftoutln.h" />
+    <ClInclude Include="source\freetype\ftparams.h" />
+    <ClInclude Include="source\freetype\ftpfr.h" />
+    <ClInclude Include="source\freetype\ftrender.h" />
+    <ClInclude Include="source\freetype\ftsizes.h" />
+    <ClInclude Include="source\freetype\ftsnames.h" />
+    <ClInclude Include="source\freetype\ftstroke.h" />
+    <ClInclude Include="source\freetype\ftsynth.h" />
+    <ClInclude Include="source\freetype\ftsystem.h" />
+    <ClInclude Include="source\freetype\fttrigon.h" />
+    <ClInclude Include="source\freetype\fttypes.h" />
+    <ClInclude Include="source\freetype\ftwinfnt.h" />
+    <ClInclude Include="source\freetype\internal\autohint.h" />
+    <ClInclude Include="source\freetype\internal\cffotypes.h" />
+    <ClInclude Include="source\freetype\internal\cfftypes.h" />
+    <ClInclude Include="source\freetype\internal\ftcalc.h" />
+    <ClInclude Include="source\freetype\internal\ftdebug.h" />
+    <ClInclude Include="source\freetype\internal\ftdrv.h" />
+    <ClInclude Include="source\freetype\internal\ftgloadr.h" />
+    <ClInclude Include="source\freetype\internal\fthash.h" />
+    <ClInclude Include="source\freetype\internal\ftmemory.h" />
+    <ClInclude Include="source\freetype\internal\ftobjs.h" />
+    <ClInclude Include="source\freetype\internal\ftpic.h" />
+    <ClInclude Include="source\freetype\internal\ftpsprop.h" />
+    <ClInclude Include="source\freetype\internal\ftrfork.h" />
+    <ClInclude Include="source\freetype\internal\ftserv.h" />
+    <ClInclude Include="source\freetype\internal\ftstream.h" />
+    <ClInclude Include="source\freetype\internal\fttrace.h" />
+    <ClInclude Include="source\freetype\internal\ftvalid.h" />
+    <ClInclude Include="source\freetype\internal\internal.h" />
+    <ClInclude Include="source\freetype\internal\psaux.h" />
+    <ClInclude Include="source\freetype\internal\pshints.h" />
+    <ClInclude Include="source\freetype\internal\services\svbdf.h" />
+    <ClInclude Include="source\freetype\internal\services\svcfftl.h" />
+    <ClInclude Include="source\freetype\internal\services\svcid.h" />
+    <ClInclude Include="source\freetype\internal\services\svfntfmt.h" />
+    <ClInclude Include="source\freetype\internal\services\svgldict.h" />
+    <ClInclude Include="source\freetype\internal\services\svgxval.h" />
+    <ClInclude Include="source\freetype\internal\services\svkern.h" />
+    <ClInclude Include="source\freetype\internal\services\svmetric.h" />
+    <ClInclude Include="source\freetype\internal\services\svmm.h" />
+    <ClInclude Include="source\freetype\internal\services\svotval.h" />
+    <ClInclude Include="source\freetype\internal\services\svpfr.h" />
+    <ClInclude Include="source\freetype\internal\services\svpostnm.h" />
+    <ClInclude Include="source\freetype\internal\services\svprop.h" />
+    <ClInclude Include="source\freetype\internal\services\svpscmap.h" />
+    <ClInclude Include="source\freetype\internal\services\svpsinfo.h" />
+    <ClInclude Include="source\freetype\internal\services\svsfnt.h" />
+    <ClInclude Include="source\freetype\internal\services\svttcmap.h" />
+    <ClInclude Include="source\freetype\internal\services\svtteng.h" />
+    <ClInclude Include="source\freetype\internal\services\svttglyf.h" />
+    <ClInclude Include="source\freetype\internal\services\svwinfnt.h" />
+    <ClInclude Include="source\freetype\internal\sfnt.h" />
+    <ClInclude Include="source\freetype\internal\t1types.h" />
+    <ClInclude Include="source\freetype\internal\tttypes.h" />
+    <ClInclude Include="source\freetype\t1tables.h" />
+    <ClInclude Include="source\freetype\ttnameid.h" />
+    <ClInclude Include="source\freetype\tttables.h" />
+    <ClInclude Include="source\freetype\tttags.h" />
+    <ClInclude Include="source\glm\common.hpp" />
+    <ClInclude Include="source\glm\detail\compute_vector_relational.hpp" />
+    <ClInclude Include="source\glm\detail\qualifier.hpp" />
+    <ClInclude Include="source\glm\detail\setup.hpp" />
+    <ClInclude Include="source\glm\detail\type_float.hpp" />
+    <ClInclude Include="source\glm\detail\type_gentype.hpp" />
+    <ClInclude Include="source\glm\detail\type_half.hpp" />
+    <ClInclude Include="source\glm\detail\type_int.hpp" />
+    <ClInclude Include="source\glm\detail\type_mat.hpp" />
+    <ClInclude Include="source\glm\detail\type_mat2x2.hpp" />
+    <ClInclude Include="source\glm\detail\type_mat2x3.hpp" />
+    <ClInclude Include="source\glm\detail\type_mat2x4.hpp" />
+    <ClInclude Include="source\glm\detail\type_mat3x2.hpp" />
+    <ClInclude Include="source\glm\detail\type_mat3x3.hpp" />
+    <ClInclude Include="source\glm\detail\type_mat3x4.hpp" />
+    <ClInclude Include="source\glm\detail\type_mat4x2.hpp" />
+    <ClInclude Include="source\glm\detail\type_mat4x3.hpp" />
+    <ClInclude Include="source\glm\detail\type_mat4x4.hpp" />
+    <ClInclude Include="source\glm\detail\type_vec.hpp" />
+    <ClInclude Include="source\glm\detail\type_vec1.hpp" />
+    <ClInclude Include="source\glm\detail\type_vec2.hpp" />
+    <ClInclude Include="source\glm\detail\type_vec3.hpp" />
+    <ClInclude Include="source\glm\detail\type_vec4.hpp" />
+    <ClInclude Include="source\glm\detail\_features.hpp" />
+    <ClInclude Include="source\glm\detail\_fixes.hpp" />
+    <ClInclude Include="source\glm\detail\_noise.hpp" />
+    <ClInclude Include="source\glm\detail\_swizzle.hpp" />
+    <ClInclude Include="source\glm\detail\_swizzle_func.hpp" />
+    <ClInclude Include="source\glm\detail\_vectorize.hpp" />
+    <ClInclude Include="source\glm\exponential.hpp" />
+    <ClInclude Include="source\glm\ext.hpp" />
+    <ClInclude Include="source\glm\ext\vec1.hpp" />
+    <ClInclude Include="source\glm\ext\vector_relational.hpp" />
+    <ClInclude Include="source\glm\fwd.hpp" />
+    <ClInclude Include="source\glm\geometric.hpp" />
+    <ClInclude Include="source\glm\glm.hpp" />
+    <ClInclude Include="source\glm\gtc\bitfield.hpp" />
+    <ClInclude Include="source\glm\gtc\color_space.hpp" />
+    <ClInclude Include="source\glm\gtc\constants.hpp" />
+    <ClInclude Include="source\glm\gtc\epsilon.hpp" />
+    <ClInclude Include="source\glm\gtc\integer.hpp" />
+    <ClInclude Include="source\glm\gtc\matrix_access.hpp" />
+    <ClInclude Include="source\glm\gtc\matrix_integer.hpp" />
+    <ClInclude Include="source\glm\gtc\matrix_inverse.hpp" />
+    <ClInclude Include="source\glm\gtc\matrix_transform.hpp" />
+    <ClInclude Include="source\glm\gtc\noise.hpp" />
+    <ClInclude Include="source\glm\gtc\packing.hpp" />
+    <ClInclude Include="source\glm\gtc\quaternion.hpp" />
+    <ClInclude Include="source\glm\gtc\random.hpp" />
+    <ClInclude Include="source\glm\gtc\reciprocal.hpp" />
+    <ClInclude Include="source\glm\gtc\round.hpp" />
+    <ClInclude Include="source\glm\gtc\type_aligned.hpp" />
+    <ClInclude Include="source\glm\gtc\type_precision.hpp" />
+    <ClInclude Include="source\glm\gtc\type_ptr.hpp" />
+    <ClInclude Include="source\glm\gtc\ulp.hpp" />
+    <ClInclude Include="source\glm\gtc\vec1.hpp" />
+    <ClInclude Include="source\glm\gtx\associated_min_max.hpp" />
+    <ClInclude Include="source\glm\gtx\bit.hpp" />
+    <ClInclude Include="source\glm\gtx\closest_point.hpp" />
+    <ClInclude Include="source\glm\gtx\color_encoding.hpp" />
+    <ClInclude Include="source\glm\gtx\color_space.hpp" />
+    <ClInclude Include="source\glm\gtx\color_space_YCoCg.hpp" />
+    <ClInclude Include="source\glm\gtx\common.hpp" />
+    <ClInclude Include="source\glm\gtx\compatibility.hpp" />
+    <ClInclude Include="source\glm\gtx\component_wise.hpp" />
+    <ClInclude Include="source\glm\gtx\dual_quaternion.hpp" />
+    <ClInclude Include="source\glm\gtx\easing.hpp" />
+    <ClInclude Include="source\glm\gtx\euler_angles.hpp" />
+    <ClInclude Include="source\glm\gtx\extend.hpp" />
+    <ClInclude Include="source\glm\gtx\extended_min_max.hpp" />
+    <ClInclude Include="source\glm\gtx\exterior_product.hpp" />
+    <ClInclude Include="source\glm\gtx\fast_exponential.hpp" />
+    <ClInclude Include="source\glm\gtx\fast_square_root.hpp" />
+    <ClInclude Include="source\glm\gtx\fast_trigonometry.hpp" />
+    <ClInclude Include="source\glm\gtx\functions.hpp" />
+    <ClInclude Include="source\glm\gtx\gradient_paint.hpp" />
+    <ClInclude Include="source\glm\gtx\handed_coordinate_space.hpp" />
+    <ClInclude Include="source\glm\gtx\hash.hpp" />
+    <ClInclude Include="source\glm\gtx\integer.hpp" />
+    <ClInclude Include="source\glm\gtx\intersect.hpp" />
+    <ClInclude Include="source\glm\gtx\io.hpp" />
+    <ClInclude Include="source\glm\gtx\log_base.hpp" />
+    <ClInclude Include="source\glm\gtx\matrix_cross_product.hpp" />
+    <ClInclude Include="source\glm\gtx\matrix_decompose.hpp" />
+    <ClInclude Include="source\glm\gtx\matrix_factorisation.hpp" />
+    <ClInclude Include="source\glm\gtx\matrix_interpolation.hpp" />
+    <ClInclude Include="source\glm\gtx\matrix_major_storage.hpp" />
+    <ClInclude Include="source\glm\gtx\matrix_operation.hpp" />
+    <ClInclude Include="source\glm\gtx\matrix_query.hpp" />
+    <ClInclude Include="source\glm\gtx\matrix_transform_2d.hpp" />
+    <ClInclude Include="source\glm\gtx\mixed_product.hpp" />
+    <ClInclude Include="source\glm\gtx\norm.hpp" />
+    <ClInclude Include="source\glm\gtx\normal.hpp" />
+    <ClInclude Include="source\glm\gtx\normalize_dot.hpp" />
+    <ClInclude Include="source\glm\gtx\number_precision.hpp" />
+    <ClInclude Include="source\glm\gtx\optimum_pow.hpp" />
+    <ClInclude Include="source\glm\gtx\orthonormalize.hpp" />
+    <ClInclude Include="source\glm\gtx\perpendicular.hpp" />
+    <ClInclude Include="source\glm\gtx\polar_coordinates.hpp" />
+    <ClInclude Include="source\glm\gtx\projection.hpp" />
+    <ClInclude Include="source\glm\gtx\quaternion.hpp" />
+    <ClInclude Include="source\glm\gtx\range.hpp" />
+    <ClInclude Include="source\glm\gtx\raw_data.hpp" />
+    <ClInclude Include="source\glm\gtx\rotate_normalized_axis.hpp" />
+    <ClInclude Include="source\glm\gtx\rotate_vector.hpp" />
+    <ClInclude Include="source\glm\gtx\scalar_multiplication.hpp" />
+    <ClInclude Include="source\glm\gtx\scalar_relational.hpp" />
+    <ClInclude Include="source\glm\gtx\spline.hpp" />
+    <ClInclude Include="source\glm\gtx\std_based_type.hpp" />
+    <ClInclude Include="source\glm\gtx\string_cast.hpp" />
+    <ClInclude Include="source\glm\gtx\texture.hpp" />
+    <ClInclude Include="source\glm\gtx\transform.hpp" />
+    <ClInclude Include="source\glm\gtx\transform2.hpp" />
+    <ClInclude Include="source\glm\gtx\type_aligned.hpp" />
+    <ClInclude Include="source\glm\gtx\type_trait.hpp" />
+    <ClInclude Include="source\glm\gtx\vector_angle.hpp" />
+    <ClInclude Include="source\glm\gtx\vector_query.hpp" />
+    <ClInclude Include="source\glm\gtx\vec_swizzle.hpp" />
+    <ClInclude Include="source\glm\gtx\wrap.hpp" />
+    <ClInclude Include="source\glm\integer.hpp" />
+    <ClInclude Include="source\glm\mat2x2.hpp" />
+    <ClInclude Include="source\glm\mat2x3.hpp" />
+    <ClInclude Include="source\glm\mat2x4.hpp" />
+    <ClInclude Include="source\glm\mat3x2.hpp" />
+    <ClInclude Include="source\glm\mat3x3.hpp" />
+    <ClInclude Include="source\glm\mat3x4.hpp" />
+    <ClInclude Include="source\glm\mat4x2.hpp" />
+    <ClInclude Include="source\glm\mat4x3.hpp" />
+    <ClInclude Include="source\glm\mat4x4.hpp" />
+    <ClInclude Include="source\glm\matrix.hpp" />
+    <ClInclude Include="source\glm\packing.hpp" />
+    <ClInclude Include="source\glm\simd\common.h" />
+    <ClInclude Include="source\glm\simd\exponential.h" />
+    <ClInclude Include="source\glm\simd\geometric.h" />
+    <ClInclude Include="source\glm\simd\integer.h" />
+    <ClInclude Include="source\glm\simd\matrix.h" />
+    <ClInclude Include="source\glm\simd\packing.h" />
+    <ClInclude Include="source\glm\simd\platform.h" />
+    <ClInclude Include="source\glm\simd\trigonometric.h" />
+    <ClInclude Include="source\glm\simd\vector_relational.h" />
+    <ClInclude Include="source\glm\trigonometric.hpp" />
+    <ClInclude Include="source\glm\vec2.hpp" />
+    <ClInclude Include="source\glm\vec3.hpp" />
+    <ClInclude Include="source\glm\vec4.hpp" />
+    <ClInclude Include="source\glm\vector_relational.hpp" />
+    <ClInclude Include="source\GL\eglew.h" />
+    <ClInclude Include="source\GL\glew.h" />
+    <ClInclude Include="source\GL\glxew.h" />
+    <ClInclude Include="source\GL\wglew.h" />
+    <ClInclude Include="source\GUI.h" />
+    <ClInclude Include="source\imgui\imconfig.h" />
+    <ClInclude Include="source\imgui\imgui.h" />
+    <ClInclude Include="source\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="source\imgui\imgui_impl_sdl.h" />
+    <ClInclude Include="source\imgui\imgui_internal.h" />
+    <ClInclude Include="source\imgui\imgui_stl.h" />
+    <ClInclude Include="source\imgui\imstb_rectpack.h" />
+    <ClInclude Include="source\imgui\imstb_textedit.h" />
+    <ClInclude Include="source\imgui\imstb_truetype.h" />
+    <ClInclude Include="source\InputManager.h" />
+    <ClInclude Include="source\JSON\json.hpp" />
+    <ClInclude Include="source\Light.h" />
+    <ClInclude Include="source\Material.h" />
+    <ClInclude Include="source\MetaStuff\detail\MetaHolder.h" />
+    <ClInclude Include="source\MetaStuff\detail\template_helpers.h" />
+    <ClInclude Include="source\MetaStuff\JsonCast.h" />
+    <ClInclude Include="source\MetaStuff\Member.h" />
+    <ClInclude Include="source\MetaStuff\Meta.h" />
+    <ClInclude Include="source\MetaStuff\StringCast.h" />
+    <ClInclude Include="source\Object.h" />
+    <ClInclude Include="source\pch.h" />
+    <ClInclude Include="source\Projection.h" />
+    <ClInclude Include="source\random.h" />
+    <ClInclude Include="source\Remap.h" />
+    <ClInclude Include="source\Render.h" />
+    <ClInclude Include="source\rgbe.h" />
+    <ClInclude Include="source\rttr\access_levels.h" />
+    <ClInclude Include="source\rttr\argument.h" />
+    <ClInclude Include="source\rttr\array_range.h" />
+    <ClInclude Include="source\rttr\associative_mapper.h" />
+    <ClInclude Include="source\rttr\constructor.h" />
+    <ClInclude Include="source\rttr\destructor.h" />
+    <ClInclude Include="source\rttr\detail\base\core_prerequisites.h" />
+    <ClInclude Include="source\rttr\detail\base\pch.h" />
+    <ClInclude Include="source\rttr\detail\base\version.h" />
+    <ClInclude Include="source\rttr\detail\comparison\comparable_types.h" />
+    <ClInclude Include="source\rttr\detail\comparison\compare_array_equal.h" />
+    <ClInclude Include="source\rttr\detail\comparison\compare_array_equal_impl.h" />
+    <ClInclude Include="source\rttr\detail\comparison\compare_array_less.h" />
+    <ClInclude Include="source\rttr\detail\comparison\compare_array_less_impl.h" />
+    <ClInclude Include="source\rttr\detail\comparison\compare_equal.h" />
+    <ClInclude Include="source\rttr\detail\comparison\compare_equal_impl.h" />
+    <ClInclude Include="source\rttr\detail\comparison\compare_less.h" />
+    <ClInclude Include="source\rttr\detail\comparison\compare_less_impl.h" />
+    <ClInclude Include="source\rttr\detail\constructor\constructor_invoker.h" />
+    <ClInclude Include="source\rttr\detail\constructor\constructor_wrapper.h" />
+    <ClInclude Include="source\rttr\detail\constructor\constructor_wrapper_base.h" />
+    <ClInclude Include="source\rttr\detail\constructor\constructor_wrapper_defaults.h" />
+    <ClInclude Include="source\rttr\detail\conversion\number_conversion.h" />
+    <ClInclude Include="source\rttr\detail\conversion\std_conversion_functions.h" />
+    <ClInclude Include="source\rttr\detail\default_arguments\default_arguments.h" />
+    <ClInclude Include="source\rttr\detail\default_arguments\invoke_with_defaults.h" />
+    <ClInclude Include="source\rttr\detail\destructor\destructor_wrapper.h" />
+    <ClInclude Include="source\rttr\detail\destructor\destructor_wrapper_base.h" />
+    <ClInclude Include="source\rttr\detail\enumeration\enumeration_helper.h" />
+    <ClInclude Include="source\rttr\detail\enumeration\enumeration_wrapper.h" />
+    <ClInclude Include="source\rttr\detail\enumeration\enumeration_wrapper_base.h" />
+    <ClInclude Include="source\rttr\detail\enumeration\enum_data.h" />
+    <ClInclude Include="source\rttr\detail\filter\filter_item_funcs.h" />
+    <ClInclude Include="source\rttr\detail\impl\argument_impl.h" />
+    <ClInclude Include="source\rttr\detail\impl\array_range_impl.h" />
+    <ClInclude Include="source\rttr\detail\impl\associative_mapper_impl.h" />
+    <ClInclude Include="source\rttr\detail\impl\enum_flags_impl.h" />
+    <ClInclude Include="source\rttr\detail\impl\instance_impl.h" />
+    <ClInclude Include="source\rttr\detail\impl\rttr_cast_impl.h" />
+    <ClInclude Include="source\rttr\detail\impl\sequential_mapper_impl.h" />
+    <ClInclude Include="source\rttr\detail\impl\string_view_impl.h" />
+    <ClInclude Include="source\rttr\detail\impl\wrapper_mapper_impl.h" />
+    <ClInclude Include="source\rttr\detail\library\library_p.h" />
+    <ClInclude Include="source\rttr\detail\metadata\metadata.h" />
+    <ClInclude Include="source\rttr\detail\metadata\metadata_handler.h" />
+    <ClInclude Include="source\rttr\detail\method\method_accessor.h" />
+    <ClInclude Include="source\rttr\detail\method\method_invoker.h" />
+    <ClInclude Include="source\rttr\detail\method\method_wrapper.h" />
+    <ClInclude Include="source\rttr\detail\method\method_wrapper_base.h" />
+    <ClInclude Include="source\rttr\detail\misc\argument_extractor.h" />
+    <ClInclude Include="source\rttr\detail\misc\argument_wrapper.h" />
+    <ClInclude Include="source\rttr\detail\misc\class_item_mapper.h" />
+    <ClInclude Include="source\rttr\detail\misc\data_address_container.h" />
+    <ClInclude Include="source\rttr\detail\misc\flat_map.h" />
+    <ClInclude Include="source\rttr\detail\misc\flat_multimap.h" />
+    <ClInclude Include="source\rttr\detail\misc\function_traits.h" />
+    <ClInclude Include="source\rttr\detail\misc\iterator_wrapper.h" />
+    <ClInclude Include="source\rttr\detail\misc\misc_type_traits.h" />
+    <ClInclude Include="source\rttr\detail\misc\register_wrapper_mapper_conversion.h" />
+    <ClInclude Include="source\rttr\detail\misc\sequential_container_type_traits.h" />
+    <ClInclude Include="source\rttr\detail\misc\std_type_traits.h" />
+    <ClInclude Include="source\rttr\detail\misc\template_type_trait.h" />
+    <ClInclude Include="source\rttr\detail\misc\template_type_trait_impl.h" />
+    <ClInclude Include="source\rttr\detail\misc\utility.h" />
+    <ClInclude Include="source\rttr\detail\parameter_info\parameter_infos.h" />
+    <ClInclude Include="source\rttr\detail\parameter_info\parameter_infos_compare.h" />
+    <ClInclude Include="source\rttr\detail\parameter_info\parameter_info_wrapper.h" />
+    <ClInclude Include="source\rttr\detail\parameter_info\parameter_info_wrapper_base.h" />
+    <ClInclude Include="source\rttr\detail\parameter_info\parameter_names.h" />
+    <ClInclude Include="source\rttr\detail\policies\ctor_policies.h" />
+    <ClInclude Include="source\rttr\detail\policies\meth_policies.h" />
+    <ClInclude Include="source\rttr\detail\policies\prop_policies.h" />
+    <ClInclude Include="source\rttr\detail\property\property_accessor.h" />
+    <ClInclude Include="source\rttr\detail\property\property_wrapper.h" />
+    <ClInclude Include="source\rttr\detail\property\property_wrapper_base.h" />
+    <ClInclude Include="source\rttr\detail\property\property_wrapper_func.h" />
+    <ClInclude Include="source\rttr\detail\property\property_wrapper_member_func.h" />
+    <ClInclude Include="source\rttr\detail\property\property_wrapper_member_object.h" />
+    <ClInclude Include="source\rttr\detail\property\property_wrapper_object.h" />
+    <ClInclude Include="source\rttr\detail\registration\bind_impl.h" />
+    <ClInclude Include="source\rttr\detail\registration\bind_types.h" />
+    <ClInclude Include="source\rttr\detail\registration\register_base_class_from_accessor.h" />
+    <ClInclude Include="source\rttr\detail\registration\registration_executer.h" />
+    <ClInclude Include="source\rttr\detail\registration\registration_impl.h" />
+    <ClInclude Include="source\rttr\detail\registration\registration_manager.h" />
+    <ClInclude Include="source\rttr\detail\registration\registration_state_saver.h" />
+    <ClInclude Include="source\rttr\detail\type\accessor_type.h" />
+    <ClInclude Include="source\rttr\detail\type\base_classes.h" />
+    <ClInclude Include="source\rttr\detail\type\get_create_variant_func.h" />
+    <ClInclude Include="source\rttr\detail\type\get_derived_info_func.h" />
+    <ClInclude Include="source\rttr\detail\type\type_comparator.h" />
+    <ClInclude Include="source\rttr\detail\type\type_converter.h" />
+    <ClInclude Include="source\rttr\detail\type\type_data.h" />
+    <ClInclude Include="source\rttr\detail\type\type_impl.h" />
+    <ClInclude Include="source\rttr\detail\type\type_name.h" />
+    <ClInclude Include="source\rttr\detail\type\type_register.h" />
+    <ClInclude Include="source\rttr\detail\type\type_register_p.h" />
+    <ClInclude Include="source\rttr\detail\type\type_string_utils.h" />
+    <ClInclude Include="source\rttr\detail\variant\variant_compare.h" />
+    <ClInclude Include="source\rttr\detail\variant\variant_data.h" />
+    <ClInclude Include="source\rttr\detail\variant\variant_data_converter.h" />
+    <ClInclude Include="source\rttr\detail\variant\variant_data_policy.h" />
+    <ClInclude Include="source\rttr\detail\variant\variant_impl.h" />
+    <ClInclude Include="source\rttr\detail\variant_associative_view\variant_associative_view_creator.h" />
+    <ClInclude Include="source\rttr\detail\variant_associative_view\variant_associative_view_creator_impl.h" />
+    <ClInclude Include="source\rttr\detail\variant_associative_view\variant_associative_view_private.h" />
+    <ClInclude Include="source\rttr\detail\variant_sequential_view\variant_sequential_view_creator.h" />
+    <ClInclude Include="source\rttr\detail\variant_sequential_view\variant_sequential_view_creator_impl.h" />
+    <ClInclude Include="source\rttr\detail\variant_sequential_view\variant_sequential_view_private.h" />
+    <ClInclude Include="source\rttr\detail\visitor\constructor_visitor_invoker.h" />
+    <ClInclude Include="source\rttr\detail\visitor\create_type_visitor_func.h" />
+    <ClInclude Include="source\rttr\detail\visitor\create_type_visitor_func_impl.h" />
+    <ClInclude Include="source\rttr\detail\visitor\method_visitor_invoker.h" />
+    <ClInclude Include="source\rttr\detail\visitor\property_visitor_invoker.h" />
+    <ClInclude Include="source\rttr\detail\visitor\type_visitor_invoker.h" />
+    <ClInclude Include="source\rttr\detail\visitor\visitor_impl.h" />
+    <ClInclude Include="source\rttr\detail\visitor\visitor_iterator.h" />
+    <ClInclude Include="source\rttr\detail\visitor\visitor_registration.h" />
+    <ClInclude Include="source\rttr\enumeration.h" />
+    <ClInclude Include="source\rttr\enum_flags.h" />
+    <ClInclude Include="source\rttr\filter_item.h" />
+    <ClInclude Include="source\rttr\instance.h" />
+    <ClInclude Include="source\rttr\library.h" />
+    <ClInclude Include="source\rttr\method.h" />
+    <ClInclude Include="source\rttr\parameter_info.h" />
+    <ClInclude Include="source\rttr\policy.h" />
+    <ClInclude Include="source\rttr\property.h" />
+    <ClInclude Include="source\rttr\registration.h" />
+    <ClInclude Include="source\rttr\registration_friend.h" />
+    <ClInclude Include="source\rttr\rttr_cast.h" />
+    <ClInclude Include="source\rttr\rttr_enable.h" />
+    <ClInclude Include="source\rttr\sequential_mapper.h" />
+    <ClInclude Include="source\rttr\string_view.h" />
+    <ClInclude Include="source\rttr\type.h" />
+    <ClInclude Include="source\rttr\type_list.h" />
+    <ClInclude Include="source\rttr\variant.h" />
+    <ClInclude Include="source\rttr\variant_associative_view.h" />
+    <ClInclude Include="source\rttr\variant_sequential_view.h" />
+    <ClInclude Include="source\rttr\visitor.h" />
+    <ClInclude Include="source\rttr\wrapper_mapper.h" />
+    <ClInclude Include="source\SDL2\begin_code.h" />
+    <ClInclude Include="source\SDL2\close_code.h" />
+    <ClInclude Include="source\SDL2\SDL.h" />
+    <ClInclude Include="source\SDL2\SDL_assert.h" />
+    <ClInclude Include="source\SDL2\SDL_atomic.h" />
+    <ClInclude Include="source\SDL2\SDL_audio.h" />
+    <ClInclude Include="source\SDL2\SDL_bits.h" />
+    <ClInclude Include="source\SDL2\SDL_blendmode.h" />
+    <ClInclude Include="source\SDL2\SDL_clipboard.h" />
+    <ClInclude Include="source\SDL2\SDL_config.h" />
+    <ClInclude Include="source\SDL2\SDL_config_android.h" />
+    <ClInclude Include="source\SDL2\SDL_config_iphoneos.h" />
+    <ClInclude Include="source\SDL2\SDL_config_macosx.h" />
+    <ClInclude Include="source\SDL2\SDL_config_minimal.h" />
+    <ClInclude Include="source\SDL2\SDL_config_pandora.h" />
+    <ClInclude Include="source\SDL2\SDL_config_psp.h" />
+    <ClInclude Include="source\SDL2\SDL_config_windows.h" />
+    <ClInclude Include="source\SDL2\SDL_config_winrt.h" />
+    <ClInclude Include="source\SDL2\SDL_config_wiz.h" />
+    <ClInclude Include="source\SDL2\SDL_copying.h" />
+    <ClInclude Include="source\SDL2\SDL_cpuinfo.h" />
+    <ClInclude Include="source\SDL2\SDL_egl.h" />
+    <ClInclude Include="source\SDL2\SDL_endian.h" />
+    <ClInclude Include="source\SDL2\SDL_error.h" />
+    <ClInclude Include="source\SDL2\SDL_events.h" />
+    <ClInclude Include="source\SDL2\SDL_filesystem.h" />
+    <ClInclude Include="source\SDL2\SDL_gamecontroller.h" />
+    <ClInclude Include="source\SDL2\SDL_gesture.h" />
+    <ClInclude Include="source\SDL2\SDL_haptic.h" />
+    <ClInclude Include="source\SDL2\SDL_hints.h" />
+    <ClInclude Include="source\SDL2\SDL_joystick.h" />
+    <ClInclude Include="source\SDL2\SDL_keyboard.h" />
+    <ClInclude Include="source\SDL2\SDL_keycode.h" />
+    <ClInclude Include="source\SDL2\SDL_loadso.h" />
+    <ClInclude Include="source\SDL2\SDL_log.h" />
+    <ClInclude Include="source\SDL2\SDL_main.h" />
+    <ClInclude Include="source\SDL2\SDL_messagebox.h" />
+    <ClInclude Include="source\SDL2\SDL_mouse.h" />
+    <ClInclude Include="source\SDL2\SDL_mutex.h" />
+    <ClInclude Include="source\SDL2\SDL_name.h" />
+    <ClInclude Include="source\SDL2\SDL_opengl.h" />
+    <ClInclude Include="source\SDL2\SDL_opengles.h" />
+    <ClInclude Include="source\SDL2\SDL_opengles2.h" />
+    <ClInclude Include="source\SDL2\SDL_opengles2_gl2.h" />
+    <ClInclude Include="source\SDL2\SDL_opengles2_gl2ext.h" />
+    <ClInclude Include="source\SDL2\SDL_opengles2_gl2platform.h" />
+    <ClInclude Include="source\SDL2\SDL_opengles2_khrplatform.h" />
+    <ClInclude Include="source\SDL2\SDL_opengl_glext.h" />
+    <ClInclude Include="source\SDL2\SDL_pixels.h" />
+    <ClInclude Include="source\SDL2\SDL_platform.h" />
+    <ClInclude Include="source\SDL2\SDL_power.h" />
+    <ClInclude Include="source\SDL2\SDL_quit.h" />
+    <ClInclude Include="source\SDL2\SDL_rect.h" />
+    <ClInclude Include="source\SDL2\SDL_render.h" />
+    <ClInclude Include="source\SDL2\SDL_revision.h" />
+    <ClInclude Include="source\SDL2\SDL_rwops.h" />
+    <ClInclude Include="source\SDL2\SDL_scancode.h" />
+    <ClInclude Include="source\SDL2\SDL_shape.h" />
+    <ClInclude Include="source\SDL2\SDL_stdinc.h" />
+    <ClInclude Include="source\SDL2\SDL_surface.h" />
+    <ClInclude Include="source\SDL2\SDL_system.h" />
+    <ClInclude Include="source\SDL2\SDL_syswm.h" />
+    <ClInclude Include="source\SDL2\SDL_test.h" />
+    <ClInclude Include="source\SDL2\SDL_test_assert.h" />
+    <ClInclude Include="source\SDL2\SDL_test_common.h" />
+    <ClInclude Include="source\SDL2\SDL_test_compare.h" />
+    <ClInclude Include="source\SDL2\SDL_test_crc32.h" />
+    <ClInclude Include="source\SDL2\SDL_test_font.h" />
+    <ClInclude Include="source\SDL2\SDL_test_fuzzer.h" />
+    <ClInclude Include="source\SDL2\SDL_test_harness.h" />
+    <ClInclude Include="source\SDL2\SDL_test_images.h" />
+    <ClInclude Include="source\SDL2\SDL_test_log.h" />
+    <ClInclude Include="source\SDL2\SDL_test_md5.h" />
+    <ClInclude Include="source\SDL2\SDL_test_memory.h" />
+    <ClInclude Include="source\SDL2\SDL_test_random.h" />
+    <ClInclude Include="source\SDL2\SDL_thread.h" />
+    <ClInclude Include="source\SDL2\SDL_timer.h" />
+    <ClInclude Include="source\SDL2\SDL_touch.h" />
+    <ClInclude Include="source\SDL2\SDL_types.h" />
+    <ClInclude Include="source\SDL2\SDL_version.h" />
+    <ClInclude Include="source\SDL2\SDL_video.h" />
+    <ClInclude Include="source\SDL2\SDL_vulkan.h" />
+    <ClInclude Include="source\shader.hpp" />
+    <ClInclude Include="source\singleton.h" />
+    <ClInclude Include="source\SOIL\SOIL.h" />
+    <ClInclude Include="source\spdlog\async.h" />
+    <ClInclude Include="source\spdlog\async_logger.h" />
+    <ClInclude Include="source\spdlog\common.h" />
+    <ClInclude Include="source\spdlog\details\async_logger_impl.h" />
+    <ClInclude Include="source\spdlog\details\circular_q.h" />
+    <ClInclude Include="source\spdlog\details\console_globals.h" />
+    <ClInclude Include="source\spdlog\details\file_helper.h" />
+    <ClInclude Include="source\spdlog\details\fmt_helper.h" />
+    <ClInclude Include="source\spdlog\details\logger_impl.h" />
+    <ClInclude Include="source\spdlog\details\log_msg.h" />
+    <ClInclude Include="source\spdlog\details\mpmc_blocking_q.h" />
+    <ClInclude Include="source\spdlog\details\null_mutex.h" />
+    <ClInclude Include="source\spdlog\details\os.h" />
+    <ClInclude Include="source\spdlog\details\pattern_formatter.h" />
+    <ClInclude Include="source\spdlog\details\periodic_worker.h" />
+    <ClInclude Include="source\spdlog\details\registry.h" />
+    <ClInclude Include="source\spdlog\details\thread_pool.h" />
+    <ClInclude Include="source\spdlog\fmt\bin_to_hex.h" />
+    <ClInclude Include="source\spdlog\fmt\bundled\colors.h" />
+    <ClInclude Include="source\spdlog\fmt\bundled\core.h" />
+    <ClInclude Include="source\spdlog\fmt\bundled\format-inl.h" />
+    <ClInclude Include="source\spdlog\fmt\bundled\format.h" />
+    <ClInclude Include="source\spdlog\fmt\bundled\ostream.h" />
+    <ClInclude Include="source\spdlog\fmt\bundled\posix.h" />
+    <ClInclude Include="source\spdlog\fmt\bundled\printf.h" />
+    <ClInclude Include="source\spdlog\fmt\bundled\ranges.h" />
+    <ClInclude Include="source\spdlog\fmt\bundled\time.h" />
+    <ClInclude Include="source\spdlog\fmt\fmt.h" />
+    <ClInclude Include="source\spdlog\fmt\ostr.h" />
+    <ClInclude Include="source\spdlog\formatter.h" />
+    <ClInclude Include="source\spdlog\logger.h" />
+    <ClInclude Include="source\spdlog\sinks\android_sink.h" />
+    <ClInclude Include="source\spdlog\sinks\ansicolor_sink.h" />
+    <ClInclude Include="source\spdlog\sinks\base_sink.h" />
+    <ClInclude Include="source\spdlog\sinks\basic_file_sink.h" />
+    <ClInclude Include="source\spdlog\sinks\daily_file_sink.h" />
+    <ClInclude Include="source\spdlog\sinks\dist_sink.h" />
+    <ClInclude Include="source\spdlog\sinks\msvc_sink.h" />
+    <ClInclude Include="source\spdlog\sinks\null_sink.h" />
+    <ClInclude Include="source\spdlog\sinks\ostream_sink.h" />
+    <ClInclude Include="source\spdlog\sinks\rotating_file_sink.h" />
+    <ClInclude Include="source\spdlog\sinks\sink.h" />
+    <ClInclude Include="source\spdlog\sinks\stdout_color_sinks.h" />
+    <ClInclude Include="source\spdlog\sinks\stdout_sinks.h" />
+    <ClInclude Include="source\spdlog\sinks\syslog_sink.h" />
+    <ClInclude Include="source\spdlog\sinks\wincolor_sink.h" />
+    <ClInclude Include="source\spdlog\spdlog.h" />
+    <ClInclude Include="source\spdlog\tweakme.h" />
+    <ClInclude Include="source\spdlog\version.h" />
+    <ClInclude Include="source\Wireframe.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="source\assimp\color4.inl" />
+    <None Include="source\assimp\material.inl" />
+    <None Include="source\assimp\matrix3x3.inl" />
+    <None Include="source\assimp\matrix4x4.inl" />
+    <None Include="source\assimp\quaternion.inl" />
+    <None Include="source\assimp\SmoothingGroups.inl" />
+    <None Include="source\assimp\vector2.inl" />
+    <None Include="source\assimp\vector3.inl" />
+    <None Include="source\glm\detail\func_common.inl" />
+    <None Include="source\glm\detail\func_common_simd.inl" />
+    <None Include="source\glm\detail\func_exponential.inl" />
+    <None Include="source\glm\detail\func_exponential_simd.inl" />
+    <None Include="source\glm\detail\func_geometric.inl" />
+    <None Include="source\glm\detail\func_geometric_simd.inl" />
+    <None Include="source\glm\detail\func_integer.inl" />
+    <None Include="source\glm\detail\func_integer_simd.inl" />
+    <None Include="source\glm\detail\func_matrix.inl" />
+    <None Include="source\glm\detail\func_matrix_simd.inl" />
+    <None Include="source\glm\detail\func_packing.inl" />
+    <None Include="source\glm\detail\func_packing_simd.inl" />
+    <None Include="source\glm\detail\func_trigonometric.inl" />
+    <None Include="source\glm\detail\func_trigonometric_simd.inl" />
+    <None Include="source\glm\detail\func_vector_relational.inl" />
+    <None Include="source\glm\detail\func_vector_relational_simd.inl" />
+    <None Include="source\glm\detail\type_gentype.inl" />
+    <None Include="source\glm\detail\type_half.inl" />
+    <None Include="source\glm\detail\type_mat.inl" />
+    <None Include="source\glm\detail\type_mat2x2.inl" />
+    <None Include="source\glm\detail\type_mat2x3.inl" />
+    <None Include="source\glm\detail\type_mat2x4.inl" />
+    <None Include="source\glm\detail\type_mat3x2.inl" />
+    <None Include="source\glm\detail\type_mat3x3.inl" />
+    <None Include="source\glm\detail\type_mat3x4.inl" />
+    <None Include="source\glm\detail\type_mat4x2.inl" />
+    <None Include="source\glm\detail\type_mat4x3.inl" />
+    <None Include="source\glm\detail\type_mat4x4.inl" />
+    <None Include="source\glm\detail\type_mat4x4_simd.inl" />
+    <None Include="source\glm\detail\type_vec.inl" />
+    <None Include="source\glm\detail\type_vec1.inl" />
+    <None Include="source\glm\detail\type_vec2.inl" />
+    <None Include="source\glm\detail\type_vec3.inl" />
+    <None Include="source\glm\detail\type_vec4.inl" />
+    <None Include="source\glm\detail\type_vec4_simd.inl" />
+    <None Include="source\glm\ext\vec1.inl" />
+    <None Include="source\glm\ext\vector_relational.inl" />
+    <None Include="source\glm\gtc\bitfield.inl" />
+    <None Include="source\glm\gtc\color_space.inl" />
+    <None Include="source\glm\gtc\constants.inl" />
+    <None Include="source\glm\gtc\epsilon.inl" />
+    <None Include="source\glm\gtc\integer.inl" />
+    <None Include="source\glm\gtc\matrix_access.inl" />
+    <None Include="source\glm\gtc\matrix_inverse.inl" />
+    <None Include="source\glm\gtc\matrix_transform.inl" />
+    <None Include="source\glm\gtc\noise.inl" />
+    <None Include="source\glm\gtc\packing.inl" />
+    <None Include="source\glm\gtc\quaternion.inl" />
+    <None Include="source\glm\gtc\quaternion_simd.inl" />
+    <None Include="source\glm\gtc\random.inl" />
+    <None Include="source\glm\gtc\reciprocal.inl" />
+    <None Include="source\glm\gtc\round.inl" />
+    <None Include="source\glm\gtc\type_precision.inl" />
+    <None Include="source\glm\gtc\type_ptr.inl" />
+    <None Include="source\glm\gtc\ulp.inl" />
+    <None Include="source\glm\gtc\vec1.inl" />
+    <None Include="source\glm\gtx\associated_min_max.inl" />
+    <None Include="source\glm\gtx\bit.inl" />
+    <None Include="source\glm\gtx\closest_point.inl" />
+    <None Include="source\glm\gtx\color_encoding.inl" />
+    <None Include="source\glm\gtx\color_space.inl" />
+    <None Include="source\glm\gtx\color_space_YCoCg.inl" />
+    <None Include="source\glm\gtx\common.inl" />
+    <None Include="source\glm\gtx\compatibility.inl" />
+    <None Include="source\glm\gtx\component_wise.inl" />
+    <None Include="source\glm\gtx\dual_quaternion.inl" />
+    <None Include="source\glm\gtx\easing.inl" />
+    <None Include="source\glm\gtx\euler_angles.inl" />
+    <None Include="source\glm\gtx\extend.inl" />
+    <None Include="source\glm\gtx\extended_min_max.inl" />
+    <None Include="source\glm\gtx\exterior_product.inl" />
+    <None Include="source\glm\gtx\fast_exponential.inl" />
+    <None Include="source\glm\gtx\fast_square_root.inl" />
+    <None Include="source\glm\gtx\fast_trigonometry.inl" />
+    <None Include="source\glm\gtx\float_notmalize.inl" />
+    <None Include="source\glm\gtx\functions.inl" />
+    <None Include="source\glm\gtx\gradient_paint.inl" />
+    <None Include="source\glm\gtx\handed_coordinate_space.inl" />
+    <None Include="source\glm\gtx\hash.inl" />
+    <None Include="source\glm\gtx\integer.inl" />
+    <None Include="source\glm\gtx\intersect.inl" />
+    <None Include="source\glm\gtx\io.inl" />
+    <None Include="source\glm\gtx\log_base.inl" />
+    <None Include="source\glm\gtx\matrix_cross_product.inl" />
+    <None Include="source\glm\gtx\matrix_decompose.inl" />
+    <None Include="source\glm\gtx\matrix_factorisation.inl" />
+    <None Include="source\glm\gtx\matrix_interpolation.inl" />
+    <None Include="source\glm\gtx\matrix_major_storage.inl" />
+    <None Include="source\glm\gtx\matrix_operation.inl" />
+    <None Include="source\glm\gtx\matrix_query.inl" />
+    <None Include="source\glm\gtx\matrix_transform_2d.inl" />
+    <None Include="source\glm\gtx\mixed_product.inl" />
+    <None Include="source\glm\gtx\norm.inl" />
+    <None Include="source\glm\gtx\normal.inl" />
+    <None Include="source\glm\gtx\normalize_dot.inl" />
+    <None Include="source\glm\gtx\number_precision.inl" />
+    <None Include="source\glm\gtx\optimum_pow.inl" />
+    <None Include="source\glm\gtx\orthonormalize.inl" />
+    <None Include="source\glm\gtx\perpendicular.inl" />
+    <None Include="source\glm\gtx\polar_coordinates.inl" />
+    <None Include="source\glm\gtx\projection.inl" />
+    <None Include="source\glm\gtx\quaternion.inl" />
+    <None Include="source\glm\gtx\raw_data.inl" />
+    <None Include="source\glm\gtx\rotate_normalized_axis.inl" />
+    <None Include="source\glm\gtx\rotate_vector.inl" />
+    <None Include="source\glm\gtx\scalar_relational.inl" />
+    <None Include="source\glm\gtx\spline.inl" />
+    <None Include="source\glm\gtx\std_based_type.inl" />
+    <None Include="source\glm\gtx\string_cast.inl" />
+    <None Include="source\glm\gtx\texture.inl" />
+    <None Include="source\glm\gtx\transform.inl" />
+    <None Include="source\glm\gtx\transform2.inl" />
+    <None Include="source\glm\gtx\type_aligned.inl" />
+    <None Include="source\glm\gtx\type_trait.inl" />
+    <None Include="source\glm\gtx\vector_angle.inl" />
+    <None Include="source\glm\gtx\vector_query.inl" />
+    <None Include="source\glm\gtx\wrap.inl" />
+    <None Include="source\MetaStuff\detail\template_helpers.inl" />
+    <None Include="source\MetaStuff\JsonCast.inl" />
+    <None Include="source\MetaStuff\Member.inl" />
+    <None Include="source\MetaStuff\Meta.inl" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{ED7C97C4-13E2-47B6-919C-89F4FE08197E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>My3DEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)source\bullet3;$(SolutionDir)source;$(SolutionDir)source\sol\lua\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)source\bullet3;$(SolutionDir)source;$(SolutionDir)source\sol\lua\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)source\bullet3;$(SolutionDir)source;$(SolutionDir)source\sol\lua\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)source\bullet3;$(SolutionDir)source;$(SolutionDir)source\sol\lua\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalOptions>/std:c++latest /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)source\bullet3;$(SolutionDir)source;$(SolutionDir)source\sol\lua\inc;source\;ft2build.h;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>rttr_core_d_x86.lib;freetype.lib;IrrXML.lib;assimp-vc140-mt.lib;zlib.lib;zlibstatic.lib;XInput.lib;SOIL.lib;fmod_vc.lib;fmodL_vc.lib;SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalOptions>/std:c++latest /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)source\bullet3;$(SolutionDir)source;$(SolutionDir)source\sol\lua\inc;source\;ft2build.h;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>rttr_core_d.lib;freetype.lib;IrrXML.lib;assimp-vc140-mt.lib;zlib.lib;zlibstatic.lib;XInput.lib;SOIL.lib;fmod_vc.lib;fmodL_vc.lib;SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalOptions>/std:c++latest /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)source\bullet3;$(SolutionDir)source;$(SolutionDir)source\sol\lua\inc;source\;ft2build.h;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>rttr_core_x86.lib;freetype.lib;IrrXML.lib;assimp-vc140-mt.lib;zlib.lib;zlibstatic.lib;XInput.lib;SOIL.lib;fmod_vc.lib;fmodL_vc.lib;SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalOptions>/std:c++latest /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)source\bullet3;$(SolutionDir)source;$(SolutionDir)source\sol\lua\inc;source\;ft2build.h;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>rttr_core.lib;freetype.lib;IrrXML.lib;assimp-vc140-mt.lib;zlib.lib;zlibstatic.lib;XInput.lib;SOIL.lib;fmod_vc.lib;fmodL_vc.lib;SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

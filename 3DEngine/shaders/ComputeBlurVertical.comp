@@ -1,0 +1,42 @@
+
+#version 430  // Version of OpenGL with COMPUTE shader support
+
+layout (local_size_x = 1, local_size_y = 128, local_size_z = 1) in; // Declares thread group size
+
+const int blurFactor = 20;
+uniform blurKernel {float weights[blurFactor * 2 + 1]; }; // Declares a uniform block
+
+layout (rgba32f) uniform readonly image2D src; // src image as single channel 32bit float readonly
+
+layout (rgba32f) uniform writeonly image2D dst; // dst image as single channel 32bit float writeonly
+
+shared vec4 sharedVar[128 + (blurFactor * 2) + 1]; // Variable shared with other threads in the 128x1 thread group2
+void main()
+{
+  ivec2 gpos = ivec2(gl_GlobalInvocationID.xy); // Combo of groupID, groupSize and localID
+  uint invocID = gl_LocalInvocationID.y; // Local thread id in the 128x1 thread groups128x1
+
+  sharedVar[invocID] = imageLoad(src, gpos + ivec2(0, - blurFactor)); // read an image pixel at an ivec2(.,.) position
+
+  if (invocID < 2.0f * blurFactor)
+    sharedVar[invocID + 128] = imageLoad(src, gpos + ivec2(0,128 - blurFactor)); // read extra 2*w pixels
+
+  barrier(); // Wait for all threads to catchup before reading sharedVar[]
+  
+  //float B = 1/(blurFactor * 2 + 1);
+  //float s = blurFactor / 2;
+  vec4 blurValue = vec4(0);
+  //for i in rance -w to w so 2w + 1
+  //Compute sum of weights[0 … 2w] times corresponding pixels v[i … i+2w]
+  for(uint i = invocID; i < invocID + (blurFactor * 2); ++i)
+  {
+    blurValue.x += sharedVar[i].x * weights[i - invocID];
+    blurValue.y += sharedVar[i].y * weights[i - invocID];
+    blurValue.z += sharedVar[i].z * weights[i - invocID];
+    blurValue.w += sharedVar[i].w * weights[i - invocID];
+  }
+  //blurValue.x = 1.0f;
+  
+  imageStore(dst, gpos, blurValue); // Write to destination image
+
+}
