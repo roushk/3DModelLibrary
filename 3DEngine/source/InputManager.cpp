@@ -418,4 +418,21 @@ void InputManager::Update(float dt)
     camera.roll(-speed * 0.2f);
     render.cameraChanged = true;
   }
+  
+  glm::vec3 rotation = camera.back();
+
+
+  
+
+  double angleX = acos(dot(rotation, glm::vec3({ 1, 0, 0 }) / length(rotation)));
+  double angleY = acos(dot(rotation, glm::vec3({ 0, 1, 0 }) / length(rotation)));
+
+  glm::vec3 pointOnSphere = { 0,0,0 };
+  
+  pointOnSphere.x = camera.objectRadius * cos(angleX) * sin(angleY);
+  pointOnSphere.z = camera.objectRadius * sin(angleX) * sin(angleY);
+  pointOnSphere.y = camera.objectRadius * cos(angleY);
+
+  camera.eye_point = pointOnSphere;
+
 }

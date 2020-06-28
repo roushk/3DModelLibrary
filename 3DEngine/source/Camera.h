@@ -18,6 +18,7 @@ class Camera {
     Camera(void);
     Camera(const glm::vec3& E, const glm::vec3& look, const glm::vec3& rel,
            float fov, float aspect, float N, float F);
+
     glm::vec3 eye(void) const;  //camera pos
     glm::vec3 right(void) const;
     glm::vec3 up(void) const;
@@ -37,6 +38,8 @@ class Camera {
     float zoomScale = 1;
 
     glm::vec3 eye_point;
+    float objectRadius = 10;
+
   private:
     void recalcVectors();
     float width, height, distance,
@@ -45,6 +48,7 @@ class Camera {
     float pitchAngle = 0;
     float yawAngle = -90;
     float rollAngle = 0;
+
 };
 
 
